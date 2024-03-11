@@ -1,4 +1,4 @@
-#include "SurfaceDialWidget.h"
+#include "surfacedialwidget.h"
 #include <QPainter>
 #include <QLabel>
 
@@ -13,11 +13,12 @@ SurfaceDialWidget::SurfaceDialWidget(QWidget* parent) : QWidget(parent)
     // Set the mask of the widget to the QRegion object
     setMask(region);
 
+
     // Create directional buttons
-    upButton = new QPushButton(QIcon("D:/Arrow_up.png"), "", this);
-    downButton = new QPushButton(QIcon("D:/Arrow_down.png"), "", this);
-    leftButton = new QPushButton(QIcon("D:/fan_large.png"), "", this);
-    rightButton = new QPushButton(QIcon("D:/fan_small.png"), "", this);
+    upButton = new QPushButton(QIcon(":/images/Arrow_up.png"), "", this);
+    downButton = new QPushButton(QIcon(":/images/Arrow_down.png"), "", this);
+    leftButton = new QPushButton(QIcon(":/images/fan_large.png"), "", this);
+    rightButton = new QPushButton(QIcon(":/images/fan_small.png"), "", this);
 
     // Set button positions within the circular area
     upButton->setGeometry(75, 0, 50, 50);

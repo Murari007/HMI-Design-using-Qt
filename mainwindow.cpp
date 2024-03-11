@@ -1,5 +1,5 @@
 #include "mainwindow.h"
-#include "SurfaceDialWidget.h"
+#include "surfacedialwidget.h"
 #include "qpainter.h"
 #include "qpen.h"
 #include "ui_mainwindow.h"
@@ -28,13 +28,13 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
 
 
     // Create QLabel objects for multiple icons
-    iconLabel1 = createIconLabel("D:/heat_max.png", 550, height() / 2 + 490);
-    iconLabel2 = createIconLabel("D:/heat_rare.png", 950, height() / 2 + 490);
-    iconLabel3 = createIconLabel("D:/sportive-car.png",750, height() / 2 + 490);
-    iconLabel4 = createIconLabel("D:/previous.png",900, height() / 2 + 410);
-    iconLabel5 = createIconLabel("D:/next.png",1000, height() / 2 + 410);
-    iconLabel6 = createIconLabel("D:/left-turn-arrow.png",550, height() / 2 + 415);
-    iconLabel7 = createIconLabel("D:/thermometer.png",680, height() / 2 + 570);
+    iconLabel1 = createIconLabel(":/images/heat_max.png", 550, height() / 2 + 490);
+    iconLabel2 = createIconLabel(":/images/heat_rare.png", 950, height() / 2 + 490);
+    iconLabel3 = createIconLabel(":/images/sportive-car.png",750, height() / 2 + 490);
+    iconLabel4 = createIconLabel(":/images/previous.png",900, height() / 2 + 410);
+    iconLabel5 = createIconLabel(":/images/next.png",1000, height() / 2 + 410);
+    iconLabel6 = createIconLabel(":/images/left-turn-arrow.png",550, height() / 2 + 415);
+    iconLabel7 = createIconLabel(":/images/thermometer.png",680, height() / 2 + 570);
 
     connect(iconLabel1, &QLabel::linkActivated, this, &MainWindow::iconLabelClicked);
 
@@ -49,7 +49,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
 
 
 
-    Button = new QPushButton(QIcon("D:/home.png"), "", this);
+    Button = new QPushButton(QIcon(":/images/home.png"), "", this);
 
     Button->setGeometry(750, height() / 2 + 410, 50, 50);
 
@@ -159,10 +159,10 @@ void MainWindow::paintEvent(QPaintEvent *event)
     painter.setBrush(brush1);
     painter.drawPolygon(polygon1);
 
-    QPixmap image("D:/map.png");
+    QPixmap image(":/images/map.png");
     // Set the desired width and height
     int scaledWidth = width();
-    int scaledHeight = 620;
+    int scaledHeight = 550;
 
     // Scale the image to the desired dimensions
     QPixmap scaledPixmap = image.scaled(scaledWidth, scaledHeight);

@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/Arrow_down.png</file>
+        <file>images/Arrow_up.png</file>
+        <file>images/fan_large.png</file>
+        <file>images/fan_small.png</file>
+        <file>images/heat_max.png</file>
+        <file>images/heat_rare.png</file>
+        <file>images/home.png</file>
+        <file>images/left-turn-arrow.png</file>
+        <file>images/next.png</file>
+        <file>images/previous.png</file>
+        <file>images/sportive-car.png</file>
+        <file>images/thermometer.png</file>
+        <file>images/map.png</file>
+    </qresource>
+</RCC>

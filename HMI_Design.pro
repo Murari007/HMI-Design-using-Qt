@@ -48,3 +48,6 @@ DISTFILES += \
     ../../previous.png \
     ../../sportive-car.png \
     ../../thermometer.png
+
+RESOURCES += \
+    resources.qrc
